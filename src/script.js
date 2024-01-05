@@ -4,11 +4,7 @@ const isTouchDevice = 'ontouchstart' in window;
 if (!isTouchDevice) {
  
 (()=>{
-
-    document.querySelector('#cursor').style.display="block";
-
-
-        
+       
     
     const hideOver = document.querySelectorAll('[hideOver]');
 

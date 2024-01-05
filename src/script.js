@@ -8,7 +8,7 @@ if (!isTouchDevice) {
     
     const hideOver = document.querySelectorAll('[hideOver]');
 
-    document.addEventListener("mousemove" ,(e)=>{
+    window.addEventListener("mousemove" ,(e)=>{
         gsap.to("#cursor",{
             x:e.x,
             y:e.y,

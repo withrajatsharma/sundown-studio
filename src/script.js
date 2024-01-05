@@ -7,14 +7,19 @@ if (!isTouchDevice) {
 
     document.querySelector('#cursor').style.display="block";
 
-    const cursor = new MouseFollower({
-        el : "#cursor",
-    });
-
 
         
     
     const hideOver = document.querySelectorAll('[hideOver]');
+
+    document.addEventListener("mousemove" ,(e)=>{
+        gsap.to("#cursor",{
+            x:e.x,
+            y:e.y,
+            duration:1,
+            ease: "back.out"
+        })
+    } )
     
     
     document.addEventListener('mouseenter', () => {

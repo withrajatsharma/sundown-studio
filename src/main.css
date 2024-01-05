@@ -11,3 +11,8 @@
     font-family: media;
     src: url(./assets/Mediu.woff);
 }
+
+
+#page3::-webkit-scrollbar{
+    display: none;
+}

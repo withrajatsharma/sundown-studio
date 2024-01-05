@@ -4,35 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sundown Studio</title>
+    <link rel="stylesheet" href="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./src/main.css">
 </head>
 <body>
 
+    <div id="cursor" class="hidden w-4 h-4 bg-priOra -translate-x-1/2  -translate-y-1/2 fixed z-50 rounded-full pointer-events-none"></div>
+
+
     <main class="w-full px-5 sm:px-8 bg-bdyClr font-roman overflow-hidden">
 
         <header>
             <nav class="flex justify-between items-center py-8 ">
-                <img class="w-32 md:w-36 select-none cursor-pointer" src="./src/assets/logo.svg" alt="">
+                <img hideOver class="w-32 md:w-36 select-none cursor-pointer" src="./src/assets/logo.svg" alt="">
                 <div class="flex md:hidden gap-3 sm:gap-4 items-center border border-black border-opacity-20 px-5 sm:text-lg sm:px-6 py-2 rounded-full cursor-pointer">
                     <i class="ri-menu-line"></i>
                     <p class="select-none">Menu</p>
                 </div>
 
                 <div class="hidden md:flex gap-3 lg:gap-2 text-lg lg:text-base">
-                    <div class="border border-black border-opacity-20 px-5 sm:px-6 py-2 rounded-full cursor-pointer
+                    <div hideOver class="border border-black border-opacity-20 px-5 sm:px-6 py-2 rounded-full cursor-pointer
                     relative after:absolute after:w-1/2 after:h-20 after:bg-black after:-bottom-20 after:left-1/2 after:-translate-x-1/2 after:rounded-full
                     after:transition-all after:ease-linear after:duration-200 overflow-hidden 
                     hover:after:-bottom-5 hover:after:w-32 hover:text-white">
-                        <p class="select-none relative z-10">Work</p>
+                        <p class="select-none relative z-10 ">Work</p>
                     </div>
-                    <div class="border border-black border-opacity-20 px-5 sm:px-6 py-2 rounded-full cursor-pointer
+                    <div hideOver class="border border-black border-opacity-20 px-5 sm:px-6 py-2 rounded-full cursor-pointer
                     relative after:absolute after:w-1/2 after:h-20 after:bg-black after:-bottom-20 after:left-1/2 after:-translate-x-1/2 after:rounded-full
                     after:transition-all after:ease-linear after:duration-200 overflow-hidden 
                     hover:after:-bottom-5 hover:after:w-32 hover:text-white">
                         <p class="select-none relative z-10">Studio</p>
                     </div>
-                    <div class="border border-black border-opacity-20 px-5 sm:px-6 py-2 rounded-full cursor-pointer
+                    <div hideOver class="border border-black border-opacity-20 px-5 sm:px-6 py-2 rounded-full cursor-pointer
                     relative after:absolute after:w-1/2 after:h-20 after:bg-black after:-bottom-20 after:left-1/2 after:-translate-x-1/2 after:rounded-full
                     after:transition-all after:ease-linear after:duration-200 overflow-hidden 
                     hover:after:-bottom-5 hover:after:w-36 hover:text-white">
@@ -73,11 +77,33 @@
 
         </section>
 
+        <section id="page3" class="py-10 md:py-14 lg:py-20 text-5xl md:text-7xl lg:text-9xl uppercase font-media font-extrabold whitespace-nowrap overflow-scroll overflow-y-hidden pointer-events-none  touch-none">
+
+            <div class="animate-movex inline-block pointer-events-none">
+                <h1 class="inline-block">experiences</h1>
+                <div class="w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full bg-priOra inline-block mx-2 lg:mb-4 mb-1" ></div>
+                <h1 class="inline-block">content</h1>
+                <div class="w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full bg-priOra inline-block mx-2 lg:mb-4 mb-1" ></div>                <h1 class="inline-block">environments</h1>
+                <div class="w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full bg-priOra inline-block mx-2 lg:mb-4 mb-1" ></div>        
+            </div>
+
+            <div class="animate-movex inline-block pointer-events-none">
+                <h1 class="inline-block">experiences</h1>
+                <div class="w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full bg-priOra inline-block mx-2 lg:mb-4 mb-1" ></div>
+                <h1 class="inline-block">content</h1>
+                <div class="w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full bg-priOra inline-block mx-2 lg:mb-4 mb-1" ></div>                <h1 class="inline-block">environments</h1>
+                <div class="w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 rounded-full bg-priOra inline-block mx-2 lg:mb-4 mb-1" ></div>        
+            </div>
+            
+            
+
+            
+        </section>
         
-
-
     </main>
     
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://unpkg.com/mouse-follower@1/dist/mouse-follower.min.js"></script>
 <script src="./src/script.js"></script>
 </html>

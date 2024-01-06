@@ -7,11 +7,13 @@
     <link rel="shortcut icon" href="./src/assets/favicon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="./src/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
+    
+    <div id="cursor" class="hidden  md:flex justify-center items-center self-center text-center text-4xl text-white gap-6 scale-0 w-4 h-4 bg-priOra -translate-x-1/2  -translate-y-1/2 fixed z-50 rounded-full pointer-events-none"></div>
 
-    <div id="cursor" class="hidden md:block scale-0 w-4 h-4 bg-priOra -translate-x-1/2  -translate-y-1/2 fixed z-50 rounded-full pointer-events-none"></div>
-
+    
 
     <main class="w-full px-5 sm:px-8 bg-bdyClr font-roman overflow-hidden">
 
@@ -215,17 +217,89 @@
 
             </div>
 
+            <button hideOver class="mt-10 border border-black border-opacity-20 rounded-full cursor-pointer
+            relative px-5 sm:px-6 py-2 after:absolute after:w-1/2 after:h-20 after:bg-black after:-bottom-20 after:left-1/2 after:-translate-x-1/2 after:rounded-full
+            after:transition-all after:ease-linear after:duration-200 overflow-hidden 
+            hover:after:-bottom-5 hover:after:w-40 hover:text-white select-none"> <span class="relative z-10">All Projects &nbsp;&nbsp;→</span></button>
+
+           
 
         </section>
 
 
-        
+        <section id="page6" class="bg-[#0b0500] flex flex-col md:justify-end md:gap-10 md:flex-row items-center text-white rounded-2xl mt-8 overflow-hidden">
+
+            <div class="px-4 py-12 sm:p-8 sm:w-[450px]">
+                <div class="font-media py-8 sm:py-5 text-5xl sm:text-4xl md:text-5xl lg:text-6xl opacity-90">
+                    <p class="before:bg-priOra  before:w-1  before:h-full before:absolute relative ml-2 pl-4 before:left-0 ">Design</p>
+
+                    <p class="opacity-40 before:bg-white  before:w-1 b before:h-full before:absolute relative pl-4 ml-2 before:left-0">Project</p>
+                    <p class="opacity-40 before:bg-white  before:w-1 b before:h-full before:absolute relative pl-4 ml-2 before:left-0">Execution</p>
+                </div>
+                <p class="text-sm leading-tight opacity-80 sm:pb-8 md:pb-0 lg:text-base">Our team works with our clients to refine an idea and concept into an executable design. We create a final design that encompasses the brand narrative to bring stories to life and provide end-to-end design solutions from concept, design, and architectural drawings to 3D renderings.</p>
+            </div>
+
+
+            <div class="overflow-hidden rounded-xl  md:w-3/5 ">
+                <img id="page6-img" class="object-[0px,-28px] scale-125 w-full rounded-xl" src="./src/assets/page6.webp" alt="">
+            </div>
+
+        </section>
+
+
+        <section id="page7" class="py-10 md:pl-10 pb-24">
+
+            <div class="pb-16 pt-4 sm:pt-8 md:pt-12 lg:pt-14">
+                <p class="text-sm before:left-0 before:top-1/2 pl-4 before:-translate-y-1/2 before:w-2 before:h-2 before:rounded-full before:bg-priOra before:absolute relative" >WHO WE WORK WITH</p>
+            </div>
+
+
+            <div class="w-full h-full mySwiper  select-none">
+                <div class="swiper-wrapper ">
+                  <div class="swiper-slide before:absolute relative before:h-full before:w-[1px] before:bg-black before:opacity-25 pl-5 md:pl-7 md:pr-10 lg:pr-16 before:left-0 text-sm text-left">
+                    <img class="object-cover w-3/4 sm:w-3/5 lg:w-4/5 mb-5 lg:mb-8" src="./src/assets/slide1.svg" alt="">
+                    <p>Retained Production support across retail and events in NY, CHI, LA. Creative Design, Design Management, Production/Project Management, and execution of work from concept to installation across the Country.</p>
+                  </div>
+                  <div class="swiper-slide before:absolute relative before:h-full before:w-[1px] before:bg-black before:opacity-25 pl-5 md:pl-7 md:pr-10 lg:pr-16 before:left-0 text-sm text-left">
+                    <img class="object-cover w-3/4 sm:w-3/5 lg:w-4/5 mb-5 lg:mb-8" src="./src/assets/slide2.svg" alt="">
+                    <p>Creative Concepting, Design, Design Management, Project Management, and execution of work from concept to installation across the Country. Cross functional communication and management of third party partners.</p>
+                  </div>
+                  <div class="swiper-slide before:absolute relative before:h-full before:w-[1px] before:bg-black before:opacity-25 pl-5 md:pl-7 md:pr-10 lg:pr-16 before:left-0 text-sm text-left">
+                    <img class="object-cover w-3/4 sm:w-3/5 lg:w-4/5 mb-5 lg:mb-8" src="./src/assets/slide3.svg" alt="">
+                    <p>Production and design along with install oversight and execution support for the SoHo store opening on Broadway St, New York. Also working on creative and production work for a new store opening in Glendale, California.</p>
+                  </div>
+                  <div class="swiper-slide before:absolute relative before:h-full before:w-[1px] before:bg-black before:opacity-25 pl-5 md:pl-7 md:pr-10 lg:pr-16 before:left-0 text-sm text-left">
+                    <img class="object-cover w-3/4 sm:w-3/5 lg:w-4/5 mb-5 lg:mb-8" src="./src/assets/slide4.svg" alt="">
+                    <p>Design and Production partner for Hunter Holiday 2022 Pop-in at Nordstrom 57th St, New York, including activations in Women’s, Men’s and Kid’s zones. Thirty-five (35) additional smaller take-downs in Nordstrom stores across the US. Concept design for Holiday boot customization events in stores across winter 2022.</p>
+                  </div>
+                  <div class="swiper-slide before:absolute relative before:h-full before:w-[1px] before:bg-black before:opacity-25 pl-5 md:pl-7 md:pr-10 lg:pr-16 before:left-0 text-sm text-left">
+                    <img class="object-cover w-3/4 sm:w-3/5 lg:w-4/5 mb-5 lg:mb-8" src="./src/assets/slide5.svg" alt="">
+                    <p>Creative, Design, and Production Partner for 2023 CES. Scope Included creation of Branding Identity, Assets, and Digital Content, Design, Production design, Production oversight and Installation of client activations for IBM, Delta, Instacart, and more.</p>
+                  </div>
+
+                  
+
+                </div>
+              </div>
+
+        </section>
+
 
 
         
     </main>
+    
+    <footer>
+        <div id="page8overlay" class="w-full h-screen opacity-0 pointer-events-none"></div>
+        <section id="page8" class="w-full h-screen -z-10 bg-red-500 fixed bottom-0">
+    </footer>
+
+
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const isTouchDevice = 'ontouchstart' in window;
 
@@ -259,6 +333,23 @@ if (!isTouchDevice) {
             scale:0,
         })
     });
+
+    document.querySelector('.mySwiper').addEventListener("mouseenter" ,()=>{
+        gsap.to("#cursor",{
+            width:"6rem",
+            height:"6rem",
+            innerHTML:`<p class="-translate-y-1">‹</p>
+        <p class="-translate-y-1">›</p>`
+        })
+    } )
+
+    document.querySelector('.mySwiper').addEventListener("mouseleave" ,()=>{
+        gsap.to("#cursor",{
+            width:"1rem",
+            height:"1rem",
+            innerHTML:``
+        })
+    } )
     
     hideOver.forEach(elem => {
         elem.addEventListener('mouseenter', () => {
@@ -278,7 +369,68 @@ if (!isTouchDevice) {
 
 
 }
-    </script>
+   
+            (()=>{
+
+
+                gsap.to("#page6 img",{
+                    
+                    objectPosition:"0px 28px",
+                    
+                    scrollTrigger:{
+                      trigger: " #page6 " ,
+                      scroller: "body" ,
+                      start: "60% 100% " ,
+                      scrub: 1,
+                    }
+                })
+
+
+
+            })();
+
+
+            (()=>{
+                const responsiveSwiper = ()=>{
+                if (window.innerWidth>=1000) {
+                var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 3.5,
+                spaceBetween: 30,
+                freeMode: true,
+                });
+            }
+            else if(window.innerWidth>=770){
+                var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 2.5,
+                spaceBetween: 30,
+                freeMode: true,
+                });
+            }
+            else{
+                var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 1.5,
+                spaceBetween: 30,
+                freeMode: true,
+                });
+            }
+            }
+
+            responsiveSwiper();
+
+            window.addEventListener("resize" ,()=>{
+                responsiveSwiper();
+            } )
+
+            })();
+
+           
+            
+   
+            
+   
+    
+
+   </script>
 </body>
 
 

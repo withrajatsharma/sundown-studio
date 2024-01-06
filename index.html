@@ -226,7 +226,59 @@
     </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./src/script.js"></script>
+    <script>
+        const isTouchDevice = 'ontouchstart' in window;
+
+if (!isTouchDevice) {
+ 
+(()=>{
+       
+    
+    const hideOver = document.querySelectorAll('[hideOver]');
+
+    window.addEventListener("mousemove" ,(e)=>{
+        gsap.to("#cursor",{
+            x:e.x,
+            y:e.y,
+            duration:1,
+            ease: "back.out"
+        })
+    } )
+    
+    
+    document.addEventListener('mouseenter', () => {
+        
+        gsap.to("#cursor",{
+            scale:1,
+            
+        })
+    });
+    
+    document.addEventListener('mouseleave', () => {
+        gsap.to("#cursor",{
+            scale:0,
+        })
+    });
+    
+    hideOver.forEach(elem => {
+        elem.addEventListener('mouseenter', () => {
+            gsap.to("#cursor",{
+                scale:0,
+            })
+        });
+        
+        elem.addEventListener('mouseleave', () => {
+            gsap.to("#cursor",{
+                scale:1,
+            })
+        });
+    })
+})();  
+
+
+
+}
+    </script>
 </body>
 
 

@@ -12,7 +12,8 @@ module.exports = {
         "spins":"spin 10s linear infinite",
         'spinslow': 'spinM 8s linear infinite alternate',
         "movex":"movex 12s linear infinite",
-        "updown":"updown 5s linear infinite alternate"
+        "updown":"updown 5s linear infinite alternate",
+        "updownlg":"updownlg 5s linear infinite alternate"
       },
       keyframes: {
         spinM: {
@@ -29,6 +30,12 @@ module.exports = {
           "25%":{transform:"translateY(-10%)"},
           "50%":{transform:"translateY(0%)"},
           "100%":{transform:"translateY(30%) scale(1.1)"}
+        },
+        updownlg:{
+          "0%":{transform:"translateY(0%)"},
+          "25%":{transform:"translateY(-10%)"},
+          "50%":{transform:"translate(10%, 0%)"},
+          "100%":{transform:"translate(20% , 10%) "}
         }
       },
       colors:{

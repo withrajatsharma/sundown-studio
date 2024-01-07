@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./src/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body id="loading" class="bg-bdyClr relative -z-20">
+<body id="loading" class="bg-red-600 relative -z-20">
     
     <div id="cursor" class="hidden  md:flex justify-center items-center self-center text-center text-4xl text-white gap-6 scale-0 w-4 h-4 bg-priOra -translate-x-1/2  -translate-y-1/2 fixed z-40 rounded-full pointer-events-none"></div>
 
@@ -17,7 +17,7 @@
     
     <main class="w-full px-5 sm:px-8 bg-bdyClr font-roman overflow-hidden">
         
-        <div class="w-full h-screen bg-black fixed left-0 top-0 transition-all ease-linear duration-300 z-50" id="loader">
+        <div class="w-full h-screen font-media bg-black fixed left-0 top-0 transition-all ease-linear duration-300 z-50" id="loader">
                 
                     <h1 class="bg-clip-text bg-gradient-to-tr from-orange-500 to-red-700 text-center text-transparent text-[15vw] md:text-[10vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-pop1" >Environment</h1>
                     <h1 class="bg-clip-text bg-gradient-to-tr from-orange-500 to-red-700 text-center text-transparent text-[15vw] md:text-[10vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-pop2">Experiences</h1>
@@ -25,13 +25,25 @@
                 
         </div>
 
-        <header>
+        <header >
             <nav class="flex justify-between items-center py-8 ">
                 <img hideOver class="w-32 md:w-36 select-none cursor-pointer" src="./src/assets/logo.svg" alt="">
-                <div class="flex md:hidden gap-3 sm:gap-4 items-center border border-black border-opacity-20 px-5 sm:text-lg sm:px-6 py-2 rounded-full cursor-pointer">
-                    <i class="ri-menu-line"></i>
+                <div id="menu" class="flex md:hidden gap-3 sm:gap-4 bg-bdyClr items-center border border-black border-opacity-20 px-5 sm:text-lg sm:px-6 py-2 rounded-full cursor-pointer z-40">
+                    <i class="ri-menu-line "></i>
+                    <i class="ri-close-line hidden"></i>
                     <p class="select-none">Menu</p>
                 </div>
+
+            
+                    <div id="menu-t" class="w-full h-[52vh] top-0 -translate-y-full left-0 bg-bdyClr rounded-b-3xl absolute z-30 text-right flex flex-col justify-end p-5 pb-12 text-6xl leading-none font-media
+                    transition-all ease-in-out duration-500 select-none">
+                        <p class="hover:text-priOra">WORK</p>
+                        <p class="hover:text-priOra">STUDIO</p>
+                        <p class="hover:text-priOra">CONTACT</p>
+                    </div>
+                    <div id="menu-b" class="w-full h-[120vh] z-20  bg-black opacity-70 absolute -translate-y-full top-0 left-0
+                    transition-all ease-in-out duration-500 "></div>
+            
 
                 <div class="hidden md:flex gap-3 lg:gap-2 text-lg lg:text-base">
                     <div hideOver class="border border-black border-opacity-20 px-5 sm:px-6 py-2 rounded-full cursor-pointer
@@ -298,7 +310,7 @@
         
     </main>
     
-    <div id="page8overlay" class="w-full opacity-0 h-screen pointer-events-none">
+    <div id="page8overlay" class="w-full opacity-0 h-[80vh] md:h-[90vh] lg:h-screen pointer-events-none">
 
     </div>
 
@@ -334,7 +346,7 @@
         </section>
    
 
-
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>	
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -344,14 +356,36 @@
 
 
         (()=>{
-            setInterval(()=>{
+            setTimeout(()=>{
                 document.querySelector('#loader').style.top="-120%";
-                document.querySelector('#loading').setAttribute("id","");
             },3500)
+            setTimeout(()=>{
+                document.querySelector('#loading').setAttribute("id","");
+
+                lenis.start();
+
+            },3800)
         })();
 
+        
 
-
+        
+            const lenis = new Lenis({
+                duration: 2.5,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                smooth: true,
+                                
+                              
+                });
+                function raf(time) {
+                 lenis.raf(time);
+                 ScrollTrigger.update(); 
+                    requestAnimationFrame(raf);
+                }
+                              
+                requestAnimationFrame(raf);
+      
+                lenis.stop();
 
 if (!isTouchDevice) {
  
@@ -419,6 +453,34 @@ if (!isTouchDevice) {
 
 
 }
+
+            let flag = 0;
+
+        document.querySelector('#menu').addEventListener("click" ,()=>{
+
+            document.querySelector('#menu i:nth-child(1)').classList.toggle("hidden");
+            document.querySelector('#menu i:nth-child(2)').classList.toggle("hidden");
+
+            if (flag==0) {
+                document.querySelector('body').setAttribute("id","loading");
+                document.querySelector('#menu-t').style.transform="translateY(0%)";
+                document.querySelector('#menu-b').style.transform="translateY(0%)";
+                lenis.stop();
+                flag =1;
+                
+                
+            }
+            else{
+                document.querySelector('body').setAttribute("id","");
+                document.querySelector('#menu-t').style.transform="translateY(-100%)";
+                document.querySelector('#menu-b').style.transform="translateY(-100%)";
+                lenis.start();
+                flag =0;
+            }
+
+        } );
+
+
    
             (()=>{
 

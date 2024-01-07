@@ -13,9 +13,20 @@ module.exports = {
         'spinslow': 'spinM 8s linear infinite alternate',
         "movex":"movex 12s linear infinite",
         "updown":"updown 5s linear infinite alternate",
-        "updownlg":"updownlg 5s linear infinite alternate"
+        "updownlg":"updownlg 5s linear infinite alternate",
+        "pop1":"pop 1s .5s",
+        "pop2":"pop 1s 1.5s",
+        "pop3":"pop 1s 2.5s",
+        
       },
       keyframes: {
+        pop:{
+          "0%":{opacity:"0" },
+          "10%":{opacity:"1"},
+          "90%":{opacity:"1" },
+          "100%":{opacity:"0"},
+
+        },
         spinM: {
           '25%': { transform: 'translateY(-10%) rotate(20deg)' },
           '75%': { transform: 'translateY(15%) rotate(20deg)' },

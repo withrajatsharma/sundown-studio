@@ -9,13 +9,21 @@
     <link rel="stylesheet" href="./src/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body>
+<body id="loading" class="bg-bdyClr relative -z-20">
     
-    <div id="cursor" class="hidden  md:flex justify-center items-center self-center text-center text-4xl text-white gap-6 scale-0 w-4 h-4 bg-priOra -translate-x-1/2  -translate-y-1/2 fixed z-50 rounded-full pointer-events-none"></div>
+    <div id="cursor" class="hidden  md:flex justify-center items-center self-center text-center text-4xl text-white gap-6 scale-0 w-4 h-4 bg-priOra -translate-x-1/2  -translate-y-1/2 fixed z-40 rounded-full pointer-events-none"></div>
 
     
-
+    
     <main class="w-full px-5 sm:px-8 bg-bdyClr font-roman overflow-hidden">
+        
+        <div class="w-full h-screen bg-black fixed left-0 top-0 transition-all ease-linear duration-300 z-50" id="loader">
+                
+                    <h1 class="bg-clip-text bg-gradient-to-tr from-orange-500 to-red-700 text-center text-transparent text-[15vw] md:text-[10vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-pop1" >Environment</h1>
+                    <h1 class="bg-clip-text bg-gradient-to-tr from-orange-500 to-red-700 text-center text-transparent text-[15vw] md:text-[10vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-pop2">Experiences</h1>
+                    <h1 class="bg-clip-text bg-gradient-to-tr from-orange-500 to-red-700 text-center text-transparent text-[15vw] md:text-[10vw] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 animate-pop3">Content</h1>
+                
+        </div>
 
         <header>
             <nav class="flex justify-between items-center py-8 ">
@@ -285,23 +293,65 @@
         </section>
 
 
+       
 
         
     </main>
     
-    <footer>
-        <div id="page8overlay" class="w-full h-screen opacity-0 pointer-events-none"></div>
-        <section id="page8" class="w-full h-screen -z-10 bg-red-500 fixed bottom-0">
-    </footer>
+    <div id="page8overlay" class="w-full opacity-0 h-screen pointer-events-none">
 
+    </div>
 
-    </section>
+           <section id="page8" class="w-full -z-10 bg-gradient-to-b from-[#ed4b35] to-black fixed bottom-0 text-white py-10 px-5 sm:px-8 pt-24">
+
+            <div class="flex flex-col gap-5 sm:flex-row sm:justify-between sm:gap-10">
+                <div class="text-3xl font-media">
+                    <h1>Work</h1>
+                    <h1>Studio</h1>
+                    <h1>Contact</h1>
+                </div>
+                <div class="sm:w-72">
+                    <p class="leading-none text-lg opacity-90">Get industry insights and creative inspiration straight to your inbox.</p>
+                    <form action="">
+                        <input type="text" placeholder="Email address" class="placeholder:text-[#bcbbbb9a] py-4 mt-8 bg-transparent border-b border-[#bcbbbb9a] w-full outline-none">
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-b opacity-85 border-[#bcbbbb9a] my-8 lg:mt-0">
+                <h1 class="text-[21vw] lg:text-[22.5vw] text-center font-media">Sundown</h1>
+            </div>
+
+            <div class="opacity-85 text-sm flex flex-col gap-2 sm:flex-row justify-between">
+                <p>Copyright © Sundown Studio</p>
+                <div class="flex justify-between sm:gap-2 md:gap-20">
+                    <p class="inline-block relative after:absolute after:w-full after:scale-x-0 after:origin-left after:transition-all after:duration-200 after:ease-out hover:after:scale-x-100 after:h-[1px] after:left-0 after:bg-white after:opacity-85 after:-bottom-1" >Brooklyn, NY</p>
+                    <p class="inline-block relative after:absolute after:w-full after:scale-x-0 after:origin-left after:transition-all after:duration-200 after:ease-out hover:after:scale-x-100 after:h-[1px] after:left-0 after:bg-white after:opacity-85 after:-bottom-1">Instagram</p>
+                    <p class="inline-block relative after:absolute after:w-full after:scale-x-0 after:origin-left after:transition-all after:duration-200 after:ease-out hover:after:scale-x-100 after:h-[1px] after:left-0 after:bg-white after:opacity-85 after:-bottom-1">LinkedIn</p>
+                </div>
+            </div>
+
+        </section>
+   
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js" integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js" integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const isTouchDevice = 'ontouchstart' in window;
+
+
+
+        (()=>{
+            setInterval(()=>{
+                document.querySelector('#loader').style.top="-120%";
+                document.querySelector('#loading').setAttribute("id","");
+            },3500)
+        })();
+
+
+
 
 if (!isTouchDevice) {
  

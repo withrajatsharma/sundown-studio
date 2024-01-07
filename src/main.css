@@ -17,3 +17,10 @@
     display: none;
 }
 
+#loading{
+    overflow: hidden;
+}
+
+#loading::-webkit-scrollbar{
+    display: none;
+}

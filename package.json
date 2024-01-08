@@ -4,7 +4,9 @@
   "description": "clone of sundown-studio.com made using tailwind css",
   "main": "index.js",
   "scripts": {
-    "live": "vite"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",

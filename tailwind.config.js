@@ -17,7 +17,6 @@ module.exports = {
         "pop1":"pop 1s .5s",
         "pop2":"pop 1s 1.5s",
         "pop3":"pop 1s 2.5s",
-        
       },
       keyframes: {
         pop:{
